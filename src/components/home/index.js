@@ -1,5 +1,9 @@
-import React from 'react';
+import React from 'react';  
 
-const Home = () => <div>Leapicons UI</div>;
+import Header from '../header';
+
+const Home = () => <div>
+  <Header />
+</div>;
 
 export default Home;

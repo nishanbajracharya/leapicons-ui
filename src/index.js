@@ -9,18 +9,17 @@ import Home from './components/home';
 
 const mountNode = document.getElementById('app-container');
 
-const renderApp = () => {
+const renderApp = Component => {
   render(
     <AppContainer>
-      <Home />
+      <Component />
     </AppContainer>,
     mountNode
   );
 };
 
-renderApp();
+renderApp(Home);
 
-// Hot Module Replacement API
 if (module.hot) {
-  module.hot.accept('./components/home', () => renderApp());
+  module.hot.accept('./components/home', () => { renderApp(Home); });
 }
