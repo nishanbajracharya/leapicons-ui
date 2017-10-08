@@ -1,5 +1,7 @@
 import React from 'react';
 
-const Header = () => <div>Header</div>;
+const Header = () => <header>
+    <div className="content">LEAPICONS</div>
+  </header>;
 
 export default Header;

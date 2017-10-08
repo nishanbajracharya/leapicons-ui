@@ -21,5 +21,7 @@ const renderApp = Component => {
 renderApp(Home);
 
 if (module.hot) {
-  module.hot.accept('./components/home', () => { renderApp(Home); });
+  module.hot.accept('./components/home', () => {
+    renderApp(Home);
+  });
 }
