@@ -11,6 +11,10 @@ body {
   font-family: $font-main;
 }
 
+input, textarea {
+  font-family: inherit;
+}
+
 a {
   text-decoration: none;
 }
