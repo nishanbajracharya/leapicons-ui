@@ -27,6 +27,7 @@ header {
   background: $header-bg;
   box-shadow: $paper-shadow;
   transition: $base-transition;
+  border-bottom: 2px solid $transparent;
 
   .branding {
     height: 60px;
