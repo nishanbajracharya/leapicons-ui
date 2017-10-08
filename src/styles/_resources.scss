@@ -1,0 +1,37 @@
+// Fonts
+$font-material: 'Material Icons';
+$font-main: 'Muli', Helvetica, Arial, sans-serif;
+
+// Colors
+$header-bg: #fff;
+$body-bg: #fafafa;
+$input-text-color: #444;
+$header-text-color: #42b283;
+$header-branding-bg: #242b38;
+$input-placeholder-color: #666;
+
+// Shadows
+$paper-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+
+// Layouts
+$main-width: 64em;
+$base-padding: 1em;
+
+// Transitions
+$base-transition: 0.1s ease-in-out;
+
+// Mixins
+@mixin center-content($width: $main-width, $padding: $base-padding) {
+  margin: 0 auto;
+  padding: $padding;
+  max-width: $width;
+}
+
+@mixin no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

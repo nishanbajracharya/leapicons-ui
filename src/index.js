@@ -1,4 +1,4 @@
-import '../public/css/reset.css';
+import 'normalize.css';
 import './styles/main.scss';
 
 import React from 'react';

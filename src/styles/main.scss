@@ -1,17 +1,90 @@
-$font-main: 'Muli', Helvetica, Arial, sans-serif;
+@import 'resources';
+
+* {
+  box-sizing: border-box;
+}
 
 html,
 body {
-  background: #fff;
+  padding-top: 60px;
+  background: $body-bg;
   font-family: $font-main;
 }
 
-header {
-  line-height: 64px;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
+a {
+  text-decoration: none;
+}
 
-  .content {
-    margin: 0 auto;
-    max-width: 64em;
+header {
+  top: 0;
+  width: 100%;
+  position: fixed;
+  background: $header-bg;
+  box-shadow: $paper-shadow;
+
+  .branding {
+    line-height: 60px;
+    background: $header-branding-bg;
+
+    .content {
+      @include center-content($main-width, 0 $base-padding);
+
+      a {
+        @include no-select;
+
+        opacity: 0.6;
+        font-weight: 500;
+        font-size: 1.2em;
+        color: $header-text-color;
+        transition: $base-transition;
+
+        img {
+          height: 32px;
+          vertical-align: middle;
+        }
+
+        span {
+          vertical-align: middle;
+        }
+      }
+
+      a:hover {
+        opacity: 0.8;
+      }
+
+      a:active {
+        opacity: 1;
+      }
+    }
+  }
+
+  .search-container {
+    @include center-content();
+
+    .search-input {
+      width: 100%;
+      border: none;
+      outline: none;
+      font-size: 0.9em;
+      padding-left: 36px;
+      color: $input-text-color;
+    }
+
+    .search-input::placeholder {
+      color: $input-placeholder-color;
+    }
+
+    .search-label {
+      font-size: 1.45em;
+      position: relative;
+    }
+
+    .search-label:before {
+      top: 5px;
+      content: 'search';
+      position: absolute;
+      font-family: $font-material;
+      color: $input-placeholder-color;
+    }
   }
 }
