@@ -20,9 +20,7 @@ Search.propTypes = {
 };
 
 export default connect(
-  state => ({
-    search: state.search,
-  }),
+  () => ({}),
   dispatch => ({
     updateSearch: query => {
       dispatch(searchActions.updateSearch(query));

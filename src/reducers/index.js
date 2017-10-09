@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 
 import searchReducer from './searchReducer';
-import iconSetReducer from './iconSetReducer';
+import iconReducer from './iconReducer';
 
 const appReducer = combineReducers({
+  icons: iconReducer,
   search: searchReducer,
-  iconSet: iconSetReducer,
 });
 
 export default (state, action) => appReducer(state, action);

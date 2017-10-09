@@ -5,20 +5,20 @@ import { connect } from 'react-redux';
 import IconSet from '../iconSet';
 import { filteredIconSet } from '../../utils/searchUtil';
 
-const IconContainer = ({ search = {}, iconSet = [] }) => (
+const IconContainer = ({ search = {}, icons = {} }) => (
   <div className="icon-container">
-    {filteredIconSet(iconSet, search.query).map(set => (
+    {filteredIconSet(icons.set, search.query).map(set => (
       <IconSet name={set.name} icons={set.icons} />
     ))}
   </div>
 );
 
 IconContainer.propTypes = {
+  icons: PropTypes.object,
   search: PropTypes.object,
-  iconSet: PropTypes.array,
 };
 
 export default connect(state => ({
   search: state.search,
-  iconSet: state.iconSet,
+  icons: state.icons,
 }))(IconContainer);
