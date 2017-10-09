@@ -5,7 +5,7 @@ const iconSet = [
       {
         name: 'trash',
         url:
-          'https://github.com/leapfrogtechnology/Leapicons/raw/master/png/action%20items/trash/48x48.png',
+          'images/png/action%20items/trash/48x48.png',
       },
     ],
   },
@@ -15,12 +15,12 @@ const iconSet = [
       {
         name: 'file',
         url:
-          'https://github.com/leapfrogtechnology/Leapicons/raw/master/png/files%20and%20folders/file/48x48.png',
+          'images/png/files%20and%20folders/file/48x48.png',
       },
       {
         name: 'folder',
         url:
-          'https://github.com/leapfrogtechnology/Leapicons/raw/master/png/files%20and%20folders/folder/48x48.png',
+          'images/png/files%20and%20folders/folder/48x48.png',
       },
     ],
   },
@@ -30,17 +30,17 @@ const iconSet = [
       {
         name: 'cocktail',
         url:
-          'https://github.com/leapfrogtechnology/Leapicons/raw/master/png/household/cocktail/48x48.png',
+          'images/png/household/cocktail/48x48.png',
       },
       {
         name: 'coffee',
         url:
-          'https://github.com/leapfrogtechnology/Leapicons/raw/master/png/household/coffee/48x48.png',
+          'images/png/household/coffee/48x48.png',
       },
       {
         name: 'teapot',
         url:
-          'https://github.com/leapfrogtechnology/Leapicons/raw/master/png/household/teapot/48x48.png',
+          'images/png/household/teapot/48x48.png',
       },
     ],
   },
@@ -50,7 +50,7 @@ const iconSet = [
       {
         name: 'boss',
         url:
-          'https://github.com/leapfrogtechnology/Leapicons/raw/master/png/logos/boss-bot/48x48.png',
+          'images/png/logos/boss-bot/48x48.png',
       },
     ],
   },
@@ -60,7 +60,7 @@ const iconSet = [
       {
         name: 'car',
         url:
-          'https://raw.githubusercontent.com/leapfrogtechnology/Leapicons/master/png/vehicle%20and%20transportation/car/48x48.png',
+          'images/png/vehicle%20and%20transportation/car/48x48.png',
       },
     ],
   },
