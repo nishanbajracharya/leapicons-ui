@@ -4,8 +4,7 @@ const iconSet = [
     icons: [
       {
         name: 'trash',
-        url:
-          'images/png/action%20items/trash/48x48.png',
+        png: 'images/png/action%20items/trash/',
       },
     ],
   },
@@ -14,13 +13,11 @@ const iconSet = [
     icons: [
       {
         name: 'file',
-        url:
-          'images/png/files%20and%20folders/file/48x48.png',
+        png: 'images/png/files%20and%20folders/file/',
       },
       {
         name: 'folder',
-        url:
-          'images/png/files%20and%20folders/folder/48x48.png',
+        png: 'images/png/files%20and%20folders/folder/',
       },
     ],
   },
@@ -29,18 +26,15 @@ const iconSet = [
     icons: [
       {
         name: 'cocktail',
-        url:
-          'images/png/household/cocktail/48x48.png',
+        png: 'images/png/household/cocktail/',
       },
       {
         name: 'coffee',
-        url:
-          'images/png/household/coffee/48x48.png',
+        png: 'images/png/household/coffee/',
       },
       {
         name: 'teapot',
-        url:
-          'images/png/household/teapot/48x48.png',
+        png: 'images/png/household/teapot/',
       },
     ],
   },
@@ -49,8 +43,7 @@ const iconSet = [
     icons: [
       {
         name: 'boss',
-        url:
-          'images/png/logos/boss-bot/48x48.png',
+        png: 'images/png/logos/boss-bot/',
       },
     ],
   },
@@ -59,8 +52,7 @@ const iconSet = [
     icons: [
       {
         name: 'car',
-        url:
-          'images/png/vehicle%20and%20transportation/car/48x48.png',
+        png: 'images/png/vehicle%20and%20transportation/car/',
       },
     ],
   },

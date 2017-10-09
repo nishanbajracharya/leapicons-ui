@@ -28,3 +28,5 @@ export const filteredIconSet = (iconSet, search) => {
       ),
     }));
 };
+
+export const getPNGIcon = (path, d) => `${path}${d}x${d}.png`;
