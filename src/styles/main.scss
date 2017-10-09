@@ -116,10 +116,12 @@ header:focus-within {
 
     .icon {
       width: 10%;
-      color: $icon-set-color;
       margin: 0.5em;
+      cursor: pointer;
       text-align: center;
       display: inline-block;
+      color: $icon-set-color;
+      transition: $base-transition;
 
       p {
         margin: 0;
@@ -128,6 +130,10 @@ header:focus-within {
       i {
         font-size: 2.4em;
       }
+    }
+
+    .icon:hover {
+      color: $icon-set-color-hovered;
     }
   }
 }
