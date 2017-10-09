@@ -1,5 +1,6 @@
 import React from 'react';
 import Fuse from 'fuse.js';
+import { connect } from 'react-redux';
 
 import IconSet from '../iconSet';
 
@@ -41,13 +42,14 @@ const filteredIconSet = (iconSet, search) => {
     }));
 };
 
-const IconContainer = () => (
+const IconContainer = ({ search = {} }) => (
   <div className="icon-container">
-    {
-      filteredIconSet(iconSet, 'reps').map(set => (
+    {filteredIconSet(iconSet, search.query).map(set => (
       <IconSet name={set.name} icons={set.icons} />
     ))}
   </div>
 );
 
-export default IconContainer;
+export default connect(state => ({
+  search: state.search,
+}))(IconContainer);
