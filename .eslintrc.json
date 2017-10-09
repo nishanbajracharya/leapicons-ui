@@ -19,12 +19,12 @@
     "react"
   ],
   "rules": {
-    "indent": ["error", 2],
     "semi": ["error", "always"],
     "quotes": ["error", "single"],
     "react/jsx-uses-vars": ["error"],
     "react/jsx-uses-react": ["error"],
     "linebreak-style": ["error", "unix"],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
     "padded-blocks": ["error", {"classes": "always"}],
     "comma-spacing": ["error", {"before": false, "after": true}]
   }

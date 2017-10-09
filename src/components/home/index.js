@@ -1,13 +1,31 @@
 import React from 'react';
-import IconContainer from '../iconContainer';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 import Header from '../header';
+import IconContainer from '../iconContainer';
+import { iconSet } from '../../constants/icons';
+import * as iconActions from '../../actions/iconActions';
 
-const Home = () => (
-  <div>
-    <Header />
-    <IconContainer />
-  </div>
-);
+const Home = ({ loadIcons = f => f }) => {
+  loadIcons();
+  return (
+    <div>
+      <Header />
+      <IconContainer />
+    </div>
+  );
+};
 
-export default Home;
+Home.propTypes = {
+  loadIcons: PropTypes.func,
+};
+
+export default connect(
+  () => ({}),
+  dispatch => ({
+    loadIcons: () => {
+      dispatch(iconActions.loadIcons(iconSet));
+    },
+  })
+)(Home);

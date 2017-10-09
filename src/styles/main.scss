@@ -126,13 +126,17 @@ header {
     }
 
     .icon {
-      width: 10%;
-      margin: 0.5em;
       cursor: pointer;
+      margin: 1em 0.5em;
       text-align: center;
       display: inline-block;
       color: $icon-set-color;
+      width: calc(12.5% - 1em);
       transition: $base-transition;
+
+      @include mobile {
+        width: calc(33.333333% - 1em);
+      }
 
       p {
         margin: 0;
