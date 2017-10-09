@@ -23,6 +23,7 @@ a {
 header {
   top: 0;
   width: 100%;
+  z-index: 1000;
   position: fixed;
   background: $header-bg;
   box-shadow: $paper-shadow;
@@ -126,11 +127,12 @@ header {
     }
 
     .icon {
+      opacity: 0.5625;
       cursor: pointer;
       margin: 1em 0.5em;
       text-align: center;
       display: inline-block;
-      color: $icon-set-color;
+      // color: $icon-set-color;
       width: calc(12.5% - 1em);
       transition: $base-transition;
 
@@ -138,7 +140,11 @@ header {
         width: calc(33.333333% - 1em);
       }
 
-      p {
+      @include tablet {
+        width: calc(16.666667% - 1em);
+      }
+
+      div {
         margin: 0;
       }
 
@@ -148,7 +154,8 @@ header {
     }
 
     .icon:hover {
-      color: $icon-set-color-hovered;
+      opacity: 0.75;
+      // color: $icon-set-color-hovered;
     }
   }
 }

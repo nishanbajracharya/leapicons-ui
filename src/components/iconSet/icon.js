@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Icon = ({ icon = {} }) => (
-  <span className="icon">
-    <p>
-      <i className="material-icons">{icon.name}</i>
-    </p>
+  <div className="icon">
+    <div>
+      <img src={icon.url} alt={icon.name} />
+    </div>
     {icon.name}
-  </span>
+  </div>
 );
 
 Icon.propTypes = {
