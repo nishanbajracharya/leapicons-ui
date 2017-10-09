@@ -5,7 +5,7 @@ export const filteredIconSet = (iconSet, search) => {
 
   if (!window.fuse) {
     window.fuse = new Fuse(iconSet, {
-      keys: ['icons'],
+      keys: ['icons.name'],
     });
   }
 
@@ -16,7 +16,7 @@ export const filteredIconSet = (iconSet, search) => {
       let count = 0;
 
       fusedIcons.icons.forEach(
-        i => i.toLowerCase().includes(search.toLowerCase()) && count++
+        i => i.name.toLowerCase().includes(search.toLowerCase()) && count++
       );
 
       return count;
@@ -24,7 +24,7 @@ export const filteredIconSet = (iconSet, search) => {
     .map(fusedIcons => ({
       name: fusedIcons.name,
       icons: fusedIcons.icons.filter(i =>
-        i.toLowerCase().includes(search.toLowerCase())
+        i.name.toLowerCase().includes(search.toLowerCase())
       ),
     }));
 };

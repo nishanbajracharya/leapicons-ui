@@ -1,11 +1,16 @@
 const iconSet = [
   {
     name: 'Action',
-    icons: ['account_box', 'alarm', 'backup'],
+    icons: [{ name: 'account_box' }, { name: 'alarm' }, { name: 'backup' }],
   },
   {
     name: 'AV',
-    icons: ['hd', 'note', 'repeat', 'snooze'],
+    icons: [
+      { name: 'hd' },
+      { name: 'note' },
+      { name: 'repeat' },
+      { name: 'snooze' },
+    ],
   },
 ];
 

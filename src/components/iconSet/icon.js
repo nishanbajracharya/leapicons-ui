@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Icon = ({ icon = '' }) => (
+const Icon = ({ icon = {} }) => (
   <span className="icon">
     <p>
-      <i className="material-icons">{icon}</i>
+      <i className="material-icons">{icon.name}</i>
     </p>
-    {icon}
+    {icon.name}
   </span>
 );
 
 Icon.propTypes = {
-  icon: PropTypes.string,
+  icon: PropTypes.object,
 };
 
 export default Icon;
