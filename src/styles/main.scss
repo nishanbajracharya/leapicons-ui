@@ -127,12 +127,12 @@ header {
     }
 
     .icon {
+      padding: 1em;
       opacity: 0.5625;
       cursor: pointer;
-      margin: 1em 0.5em;
+      margin: 0 0.5em;
       text-align: center;
       display: inline-block;
-      // color: $icon-set-color;
       width: calc(12.5% - 1em);
       transition: $base-transition;
 
@@ -155,7 +155,7 @@ header {
 
     .icon:hover {
       opacity: 0.75;
-      // color: $icon-set-color-hovered;
+      background: rgba(0, 0, 0, 0.05);
     }
   }
 }
