@@ -21,7 +21,7 @@ $main-width: 64em;
 $base-padding: 1em;
 
 // Transitions
-$base-transition: 0.1s ease-in-out;
+$base-transition: all 0.2s ease-in-out 0s;
 
 // Mixins
 @mixin center-content($width: $main-width, $padding: $base-padding) {
