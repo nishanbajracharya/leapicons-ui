@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import Header from '../header';
+import Toolbar from '../toolbar';
 import IconContainer from '../iconContainer';
 import { iconSet } from '../../constants/icons';
 import * as iconActions from '../../actions/iconActions';
@@ -13,6 +14,7 @@ const Home = ({ loadIcons = f => f }) => {
     <div>
       <Header />
       <IconContainer />
+      <Toolbar />
     </div>
   );
 };

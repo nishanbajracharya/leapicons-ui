@@ -4,9 +4,23 @@
   box-sizing: border-box;
 }
 
+.clearfix:before,
+.clearfix:after {
+  content: ' ';
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
 html,
 body {
-  padding: 60px 0 1em;
+  padding: 60px 0 2em;
   background: $body-bg;
   font-family: $font-main;
 }
@@ -166,5 +180,43 @@ header {
         }
       }
     }
+  }
+}
+
+.toolbar-container {
+  left: 0;
+  width: 100%;
+  bottom: -50px;
+  z-index: 1000;
+  position: fixed;
+  transition: $base-transition;
+
+  .toolbar {
+    @include center-content($main-width, $base-padding / 2);
+    box-shadow: $paper-shadow;
+    background: $header-text-color;
+
+    .icon-name {
+      display: inline-block;
+      padding: $base-padding / 2 $base-padding;
+    }
+
+    .close-icon {
+      float: right;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: $base-transition;
+      background: rgba(0, 0, 0, 0.1);
+      padding: $base-padding / 2 $base-padding;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
+  &.active {
+    bottom: 0;
   }
 }
