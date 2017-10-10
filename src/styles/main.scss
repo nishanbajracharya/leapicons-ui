@@ -197,21 +197,98 @@ header {
     background: $header-text-color;
 
     .icon-name {
+      position: relative;
       display: inline-block;
-      padding: $base-padding / 2 $base-padding;
+      vertical-align: middle;
+      padding: $base-padding / 2 $base-padding $base-padding / 2 48px;
+
+      img {
+        top: 2px;
+        left: 8px;
+        width: 32px;
+        height: 32px;
+        position: absolute;
+      }
+
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+      &:after {
+        top: 0;
+        right: 0;
+        content: '';
+        height: 100%;
+        position: absolute;
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+      }
+
+      @include mobile {
+        height: 34px;
+        padding-left: 36px;
+
+        .name {
+          display: none;
+        }
+      }
     }
 
-    .close-icon {
-      float: right;
-      border: none;
-      outline: none;
+    .icon-size {
       cursor: pointer;
-      transition: $base-transition;
-      background: rgba(0, 0, 0, 0.1);
-      padding: $base-padding / 2 $base-padding;
+      margin-left: 1em;
+      position: relative;
+      vertical-align: middle;
 
-      &:hover {
-        background: rgba(0, 0, 0, 0.2);
+      .value {
+        transition: $base-transition;
+        background: rgba(0, 0, 0, 0.1);
+        padding: $base-padding / 2 $base-padding;
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      .size-selection {
+        left: 0;
+        margin: 0;
+        padding: 0;
+        bottom: -8px;
+        background: #fff;
+        position: absolute;
+        box-shadow: $paper-shadow;
+      }
+
+      .size-selection li {
+        display: block;
+        padding: 0.5em 2em;
+        transition: $base-transition;
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+
+    .right-toolbars {
+      float: right;
+
+      .png-download {
+        color: #000;
+        margin: 0 1em;
+        cursor: pointer;
+        padding: $base-padding / 2;
+      }
+
+      .close-icon {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: $base-transition;
+        background: rgba(0, 0, 0, 0.1);
+        padding: $base-padding / 2 $base-padding;
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.2);
+        }
       }
     }
   }

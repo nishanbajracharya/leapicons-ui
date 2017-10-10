@@ -1,3 +1,5 @@
+const sizes = [512, 256, 128, 96, 64, 48, 32, 24, 16];
+
 const iconSet = [
   {
     name: 'Action Items',
@@ -66,4 +68,4 @@ const iconSet = [
   },
 ];
 
-export { iconSet };
+export { sizes, iconSet };
