@@ -273,15 +273,29 @@ header {
 
       .png-download {
         color: #000;
-        margin: 0 1em;
+        margin-right: 1em;
         cursor: pointer;
-        padding: $base-padding / 2;
+        padding: 8px;
+        vertical-align: middle;
+        transition: $base-transition;
+        background: rgba(0, 0, 0, 0.1);
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.2);
+        }
+
+        @include mobile {
+          margin-right: 12px;
+        }
       }
 
       .close-icon {
         border: none;
+        height: 36px;
         outline: none;
         cursor: pointer;
+        margin-right: 0.5em;
+        vertical-align: middle;
         transition: $base-transition;
         background: rgba(0, 0, 0, 0.1);
         padding: $base-padding / 2 $base-padding;
