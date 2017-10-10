@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
+import { getPNGIcon } from '../../utils/searchUtil';
 import * as iconActions from '../../actions/iconActions';
 
 const Toolbar = ({ selected = {}, clearSelectedIcon = f => f }) => {
