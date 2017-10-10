@@ -14,7 +14,6 @@ const baseHref = process.env.BASE_HREF || '/';
 module.exports = {
   entry: './index.js', // the entry point of our app
   output: {
-    publicPath: baseHref,
     chunkFilename: '[id].js',
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/bundle.[chunkhash].js', // the output bundle
