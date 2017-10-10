@@ -8,7 +8,7 @@ import * as iconActions from '../../actions/iconActions';
 const Icon = ({ icon = {}, selected = {}, setSelectedIcon = f => f }) => (
   <div
     className={`icon ${selected.name === icon.name ? 'selected' : ''}`}
-    onClick={() => setSelectedIcon(icon)}
+    onClick={() => setSelectedIcon(selected.name === icon.name ? {} : icon)}
   >
     <div>
       <img src={getPNGIcon(icon.png, 48)} alt={icon.name} />
