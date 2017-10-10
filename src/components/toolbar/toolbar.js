@@ -25,7 +25,7 @@ const Toolbar = ({
       </span>
       <span className="icon-size">
         <span className="value" onClick={() => openSizeSelection(true)}>
-          {toolbar.size}px
+          {toolbar.size}px &#9662;
         </span>
         {toolbar.openSelection && (
           <ul className="size-selection">
@@ -38,8 +38,12 @@ const Toolbar = ({
         )}
       </span>
       <div className="right-toolbars">
+        <a download href={selected.svg} className="img-download">
+          &#11015; SVG
+        </a>
+
         <a
-          className="png-download"
+          className="img-download"
           href={getPNGIcon(selected.png, toolbar.size)}
           download={`${selected.name}-${toolbar.size}x${toolbar.size}`}
         >

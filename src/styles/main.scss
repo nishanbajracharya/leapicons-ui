@@ -197,6 +197,10 @@ header {
     box-shadow: $paper-shadow;
     background: $header-text-color;
 
+    @include mobile {
+      padding: $base-padding / 2 4px;
+    }
+
     .icon-name {
       position: relative;
       display: inline-block;
@@ -224,7 +228,7 @@ header {
 
       @include mobile {
         height: 34px;
-        padding-left: 36px;
+        padding-left: 28px;
 
         .name {
           display: none;
@@ -238,6 +242,10 @@ header {
       position: relative;
       vertical-align: middle;
 
+      @include mobile {
+        margin-left: $base-padding / 2;
+      }
+
       .value {
         transition: $base-transition;
         background: rgba(0, 0, 0, 0.1);
@@ -245,6 +253,10 @@ header {
 
         &:hover {
           background: rgba(0, 0, 0, 0.2);
+        }
+
+        @include mobile {
+          padding: $base-padding / 2;
         }
       }
 
@@ -273,11 +285,11 @@ header {
       margin: 6px 0;
       float: right;
 
-      .png-download {
+      .img-download {
         padding: 8px;
         color: #000;
         cursor: pointer;
-        margin: 0.5em 1em;
+        margin: 0.5em 1em 0.5em 0;
         vertical-align: middle;
         transition: $base-transition;
         background: rgba(0, 0, 0, 0.1);
@@ -286,20 +298,30 @@ header {
           background: rgba(0, 0, 0, 0.2);
         }
 
-        @include tablet {
+        &:last-child {
           margin-right: 56px;
         }
 
+        @include tablet {
+          margin-right: 8px;
+          &:last-child {
+            margin-right: 48px;
+          }
+        }
+
         @include mobile {
-          margin-right: 56px;
+          margin-right: 4px;
+          &:last-child {
+            margin-right: 52px;
+          }
         }
       }
     }
 
     .close-icon {
-      top: -18px;
+      top: 8px;
+      right: 6px;
       width: 36px;
-      right: -24px;
       border: none;
       height: 36px;
       color: #fff;
@@ -311,11 +333,6 @@ header {
       margin-right: 0.5em;
       vertical-align: middle;
       transition: $base-transition;
-
-      @include tablet {
-        top: 8px;
-        right: 6px;
-      }
 
       @include mobile {
         top: 6px;
