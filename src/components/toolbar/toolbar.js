@@ -43,12 +43,13 @@ const Toolbar = ({
           href={getPNGIcon(selected.png, toolbar.size)}
           download={`${selected.name}-${toolbar.size}x${toolbar.size}`}
         >
-          PNG
+          &#11015; PNG
         </a>
-        <button className="close-icon" onClick={() => clearSelectedIcon()}>
-          Cancel
-        </button>
       </div>
+
+      <button className="close-icon" onClick={() => clearSelectedIcon()}>
+        &#x2715;
+      </button>
     </div>
   </div>
 );

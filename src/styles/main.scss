@@ -186,12 +186,13 @@ header {
 .toolbar-container {
   left: 0;
   width: 100%;
-  bottom: -64px;
+  bottom: -72px;
   z-index: 1000;
   position: fixed;
   transition: $base-transition;
 
   .toolbar {
+    position: relative;
     @include center-content($main-width, $base-padding / 2);
     box-shadow: $paper-shadow;
     background: $header-text-color;
@@ -269,40 +270,60 @@ header {
     }
 
     .right-toolbars {
+      margin: 6px 0;
       float: right;
 
       .png-download {
-        color: #000;
-        margin-right: 1em;
-        cursor: pointer;
         padding: 8px;
+        color: #000;
+        cursor: pointer;
+        margin: 0.5em 1em;
         vertical-align: middle;
         transition: $base-transition;
         background: rgba(0, 0, 0, 0.1);
 
         &:hover {
           background: rgba(0, 0, 0, 0.2);
+        }
+
+        @include tablet {
+          margin-right: 56px;
         }
 
         @include mobile {
-          margin-right: 12px;
+          margin-right: 56px;
         }
       }
+    }
 
-      .close-icon {
-        border: none;
-        height: 36px;
-        outline: none;
-        cursor: pointer;
-        margin-right: 0.5em;
-        vertical-align: middle;
-        transition: $base-transition;
-        background: rgba(0, 0, 0, 0.1);
-        padding: $base-padding / 2 $base-padding;
+    .close-icon {
+      top: -18px;
+      width: 36px;
+      right: -24px;
+      border: none;
+      height: 36px;
+      color: #fff;
+      outline: none;
+      cursor: pointer;
+      background: #a22;
+      position: absolute;
+      border-radius: 50%;
+      margin-right: 0.5em;
+      vertical-align: middle;
+      transition: $base-transition;
 
-        &:hover {
-          background: rgba(0, 0, 0, 0.2);
-        }
+      @include tablet {
+        top: 8px;
+        right: 6px;
+      }
+
+      @include mobile {
+        top: 6px;
+        right: 6px;
+      }
+
+      &:hover {
+        background: #e22;
       }
     }
   }
