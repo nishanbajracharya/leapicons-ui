@@ -17,10 +17,9 @@ const Toolbar = ({
   <div className={`toolbar-container ${selected.name ? 'active' : ''}`}>
     <div className="toolbar clearfix">
       <span className="icon-name">
-        <img
-          src={selected.name && getPNGIcon(selected.png, 32)}
-          alt={selected.name}
-        />
+        {selected.name && (
+          <img src={getPNGIcon(selected.png, 32)} alt={selected.name} />
+        )}
         <span className="name">{selected.name}</span>
       </span>
       <span className="icon-size">
