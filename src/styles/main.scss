@@ -1,6 +1,7 @@
 @import 'resources';
 
 * {
+  @include no-select;
   box-sizing: border-box;
 }
 
@@ -52,8 +53,6 @@ header {
       @include center-content($main-width, 0 $base-padding);
 
       a {
-        @include no-select;
-
         opacity: 0.8;
         font-weight: 600;
         font-size: 1.2em;
