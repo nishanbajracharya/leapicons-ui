@@ -12,7 +12,9 @@ const Header = () => (
       </div>
     </div>
     <div className="search-container">
-      <Search />
+      <div className="container">
+        <Search />
+      </div>
     </div>
   </header>
 );
