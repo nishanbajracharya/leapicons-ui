@@ -10,10 +10,14 @@ const Icon = ({ icon = {}, selected = {}, setSelectedIcon = f => f }) => (
     className={`icon ${selected.name === icon.name ? 'selected' : ''}`}
     onClick={() => setSelectedIcon(selected.name === icon.name ? {} : icon)}
   >
-    <div>
-      <img src={getPNGIcon(icon.png, 48)} alt={icon.name} />
+    <div className="icon-wrapper">
+      {/* <img src={icon.svg} alt={icon.name} /> */}
+      <span dangerouslySetInnerHTML={{__html: icon.svgElement || ''}
+       } />
     </div>
-    {icon.name}
+    <div className="icon-label">
+      {icon.name}
+    </div>
   </div>
 );
 
