@@ -1,5 +1,6 @@
 import 'normalize.css';
-import './styles/main.scss';
+// import './styles/main.scss';
+import './styles/sass/style.scss';
 
 import React from 'react';
 import { render } from 'react-dom';

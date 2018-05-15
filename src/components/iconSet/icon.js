@@ -6,7 +6,7 @@ import { getPNGIcon } from '../../utils/searchUtil';
 import * as iconActions from '../../actions/iconActions';
 
 const Icon = ({ icon = {}, selected = {}, setSelectedIcon = f => f }) => (
-  <div
+  <li
     className={`icon ${selected.name === icon.name ? 'selected' : ''}`}
     onClick={() => setSelectedIcon(selected.name === icon.name ? {} : icon)}
   >
@@ -18,7 +18,11 @@ const Icon = ({ icon = {}, selected = {}, setSelectedIcon = f => f }) => (
     <div className="icon-label">
       {icon.name}
     </div>
-  </div>
+    <div>
+       <button>Download</button>
+       <button>Add</button>
+    </div>
+  </li>
 );
 
 Icon.propTypes = {

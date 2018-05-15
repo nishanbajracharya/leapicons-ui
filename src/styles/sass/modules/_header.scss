@@ -1,0 +1,43 @@
+header {
+    background-color: $white;
+}
+
+.header--top {
+    padding: 8px 0;
+}
+
+.branding {
+    display: inline-block;
+    color: $color-text;
+
+    &:hover {
+        color: $color-text;
+    }
+}
+
+.logo {
+    width: 44px;
+    margin-right: 8px;
+}
+
+.main-heading {
+    text-transform: uppercase;
+    margin-top: 5.5px;
+    font-weight: $weight-bold;
+}
+
+.header--bottom {
+    padding: 12px 0;
+    border-top: 1px solid $border-color;
+
+    @include m(icon) {
+        margin-right: 16px;
+    }
+
+    .form-control {
+        border: 0;
+        font-size: $md-font-size;
+        width: calc(100% - 40px);
+        line-height: 1.25;
+    }
+}

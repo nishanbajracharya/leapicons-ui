@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 import Icon from './icon';
 
 const IconSet = ({ name = '', icons = [] }) => (
-  <div className="icon-set">
-    <p className="set-title">{name}</p>
-    {icons.map(icon => <Icon icon={icon} />)}
+  <div className="block">
+    <div className="block__heading">{name}</div>
+    <ul className="icon-list">
+      {icons.map(icon => <Icon icon={icon} />)}
+    </ul>
   </div>
 );
 

@@ -6,7 +6,7 @@ import IconSet from '../iconSet';
 import { filteredIconSet } from '../../utils/searchUtil';
 
 const IconContainer = ({ search = {}, icons = {} }) => (
-  <div className="icon-container">
+  <div className="full-scope-card">
     {filteredIconSet(icons.set, search.query).map(set => (
       <IconSet name={set.name} icons={set.icons} />
     ))}
