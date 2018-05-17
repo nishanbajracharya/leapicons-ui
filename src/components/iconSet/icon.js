@@ -7,20 +7,25 @@ import * as iconActions from '../../actions/iconActions';
 
 const Icon = ({ icon = {}, selected = {}, setSelectedIcon = f => f }) => (
   <li
-    className={`icon ${selected.name === icon.name ? 'selected' : ''}`}
+    className={`${selected.name === icon.name ? 'selected' : ''}`}
     onClick={() => setSelectedIcon(selected.name === icon.name ? {} : icon)}
+    title={icon.name}
   >
-    <div className="icon-wrapper">
+    <div className="icon-wrapper" dangerouslySetInnerHTML={{__html: icon.svgElement || ''}}>
       {/* <img src={icon.svg} alt={icon.name} /> */}
-      <span dangerouslySetInnerHTML={{__html: icon.svgElement || ''}
-       } />
+      {/* <span 
+       } /> */}
     </div>
     <div className="icon-label">
       {icon.name}
     </div>
-    <div>
-       <button>Download</button>
-       <button>Add</button>
+    <div className="action-button-list">
+       <button className="btn btn__icon">
+         <img src="images/download-icon.svg" />
+       </button>
+       <button className="btn btn__icon">
+        <img src="images/add-to-collection-icon.svg" />
+       </button>
     </div>
   </li>
 );

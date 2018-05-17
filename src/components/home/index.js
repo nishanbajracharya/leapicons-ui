@@ -13,12 +13,12 @@ const Home = ({ loadIcons = f => f }) => {
   return (
     <div>
       <Header />
-      <main>
-        <div className="container">
+      <main className="">
+        <div className="custom-container">
           <IconContainer />
         </div>
+        <Toolbar />
       </main>
-      <Toolbar />
     </div>
   );
 };

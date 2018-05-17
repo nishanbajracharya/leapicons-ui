@@ -2,6 +2,10 @@ header {
     background-color: $white;
 }
 
+.header--fixed-bottom {
+    padding-bottom: 50px;
+}
+
 .header--top {
     padding: 8px 0;
 }
@@ -29,9 +33,17 @@ header {
 .header--bottom {
     padding: 12px 0;
     border-top: 1px solid $border-color;
+    background-color: $white;
 
     @include m(icon) {
         margin-right: 16px;
+    }
+
+    @include m(fixed) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
     }
 
     .form-control {

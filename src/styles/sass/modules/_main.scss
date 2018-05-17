@@ -1,4 +1,5 @@
 .full-scope-card {
+	margin: 32px 0;
     background: $white;
     border-radius: 1px;
     -moz-box-shadow: 0px, 1px rgba(0, 0, 0, 0.25);
@@ -20,14 +21,65 @@
     li {
         width: 100%;
         text-align: center;
+        padding: 16px;
+        cursor: pointer;
+        border-radius: 4px;
 
         @include mq(xxsm) {
             width: 50%;
             float: left;
         }
 
+        @include mq(xsm) {
+            width: 33.33333%;
+        }
+
+        @include mq(md) {
+            width: 25%;
+        }
+
+        @include mq(lg) {
+            width: 16.66667%;
+        }
+
+        .action-button-list {
+            visibility: hidden;
+        }
+
         &:hover {
             background-color: $background-gray;
+
+            .action-button-list {
+                visibility: visible;
+            }
         }
+    }
+}
+
+.icon-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.toolbar-container {
+    // width: 100%;
+    display: none;
+    height: 100%;
+    background: red;
+
+    @include mq(md) {
+        width: 420px;
+    }
+}
+
+.toolbar--open {
+    .custom-container {
+        width: calc(100% - 420px);
+        float: left;
+    }
+
+    .toolbar-container {
+        display: block;
     }
 }

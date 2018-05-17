@@ -42,3 +42,18 @@
 .right {
   float: right !important;
 }
+.custom-container {
+	padding: 0 15px;
+
+	@include mq(sm) {
+		margin: 0 15px;
+	}
+
+	@include mq(md) {
+		margin: 0 40px;
+	}
+
+	@include mq(lg) {
+		margin: 0 50px;
+	}
+}

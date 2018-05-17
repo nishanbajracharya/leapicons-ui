@@ -14,7 +14,7 @@ const Toolbar = ({
   clearSelectedIcon = f => f,
   openSizeSelection = f => f,
 }) => (
-  <div className={`toolbar-container ${selected.name ? 'active' : ''}`}>
+  <div className={`toolbar-container right ${selected.name ? 'active' : ''}`}>
     <div className="toolbar clearfix">
       <span className="icon-name">
         {selected.name && (
