@@ -1,0 +1,39 @@
+.toolbar-container {
+  position: fixed;
+  top: 110px;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  -moz-box-shadow: -1px 1px rgba(0, 0, 0, 0.18);
+  -webkit-box-shadow: -1px 1px rgba(0, 0, 0, 0.18);
+  box-shadow: -1px 1px rgba(0, 0, 0, 0.18);
+  display: none;
+
+  @include mq(md) {
+      width: 420px;
+  }
+}
+
+.toolbar--open {
+  .custom-container {
+      width: calc(100% - 520px);
+      float: left;
+  }
+
+  .toolbar-container {
+      display: block;
+  }
+}
+
+.toolbar {
+  height: 100%;
+  background: $white;
+  position: relative;
+
+  @include e(header) {
+    padding: 10px;
+    background: $purple;
+    border-bottom: 1px solid $border-color;
+    color: $white;
+  }
+}

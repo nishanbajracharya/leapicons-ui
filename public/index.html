@@ -12,7 +12,25 @@
 
 <body>
   <div id="app-container"></div>
-  
+
+  <script>
+    window.onscroll = function() {myFunction()};
+    
+    var header = document.getElementById("myHeader");
+    var sticky = 10;
+    
+    
+    function myFunction() {
+      console.log(sticky);
+      if (window.pageYOffset >= sticky) {
+        // header.classList.add("sticky");
+        console.log("stick to top")
+      } else {
+        console.log("unstick from top")        
+        // header.classList.remove("sticky");
+      }
+    }
+    </script>
 </body>
 
 </html>

@@ -22,16 +22,22 @@ class Header extends React.Component{
   listenScroll() {
     window.onscroll = () => {
       let offset = document.getElementsByClassName('header--top')[0].offsetHeight;
-      if (window.pageYOffset >= offset)
+      let headerBottomHeight = document.getElementsByClassName('header--bottom')[0].offsetHeight;
+      
+      if (window.pageYOffset >= offset){
         this.setState({
           headerClass : 'header--fixed-bottom',
           headerBottomClass: 'header--bottom--fixed'
         });
-      else
+        document.getElementsByClassName('toolbar-container')[0].style.top = headerBottomHeight + 'px';
+      }
+      else {
+        document.getElementsByClassName('toolbar-container')[0].style.top = (headerBottomHeight + offset - window.pageYOffset) + 'px';
         this.setState({
           headerClass : '',
           headerBottomClass : ''
         });
+      }
     }
   }
 

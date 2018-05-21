@@ -13,7 +13,7 @@ const Home = ({ loadIcons = f => f }) => {
   return (
     <div>
       <Header />
-      <main className="">
+      <main className="toolbar--open">
         <div className="custom-container">
           <IconContainer />
         </div>

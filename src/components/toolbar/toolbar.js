@@ -14,47 +14,62 @@ const Toolbar = ({
   clearSelectedIcon = f => f,
   openSizeSelection = f => f,
 }) => (
-  <div className={`toolbar-container right ${selected.name ? 'active' : ''}`}>
-    <div className="toolbar clearfix">
-      <span className="icon-name">
-        {selected.name && (
-          <img src={selected.svg} alt={selected.name} />
-        )}
-        <span className="name">{selected.name}</span>
-      </span>
-      <span className="icon-size">
-        <span className="value" onClick={() => openSizeSelection(true)}>
-          {toolbar.size}px &#9662;
-        </span>
-        {toolbar.openSelection && (
-          <ul className="size-selection">
-            {sizes.map((size, i) => (
-              <li key={i} onClick={() => setSize(size)}>
-                {size}px
-              </li>
-            ))}
-          </ul>
-        )}
-      </span>
-      <div className="right-toolbars">
-        <a download href={selected.svg} className="img-download">
-          &#11015; SVG
-        </a>
-
-        <a
-          className="img-download"
-          href={getPNGIcon(selected.png, toolbar.size)}
-          download={`${selected.name}-${toolbar.size}x${toolbar.size}`}
-        >
-          &#11015; PNG
-        </a>
+  <div className="toolbar-container right">
+    <div className="toolbar">
+      <div className="toolbar__header">
+        <div className="left">
+          <img src="images/flag-icon.svg" alt="Flag" />
+          <span>Flag</span>
+        </div>
+        <div className="right">
+          <button>48px</button>
+          <button>SVG</button>
+          <button>Download</button>
+        </div>
       </div>
-
-      <button className="close-icon" onClick={() => clearSelectedIcon()}>
-        &#x2715;
-      </button>
     </div>
   </div>
+  // {<div className={`toolbar-container right ${selected.name ? 'active' : ''}`}>
+  //   <div className="toolbar clearfix">
+  //     <span className="icon-name">
+  //       {selected.name && (
+  //         <img src={selected.svg} alt={selected.name} />
+  //       )}
+  //       <span className="name">{selected.name}</span>
+  //     </span>
+  //     <span className="icon-size">
+  //       <span className="value" onClick={() => openSizeSelection(true)}>
+  //         {toolbar.size}px &#9662;
+  //       </span>
+  //       {toolbar.openSelection && (
+  //         <ul className="size-selection">
+  //           {sizes.map((size, i) => (
+  //             <li key={i} onClick={() => setSize(size)}>
+  //               {size}px
+  //             </li>
+  //           ))}
+  //         </ul>
+  //       )}
+  //     </span>
+  //     <div className="right-toolbars">
+  //       <a download href={selected.svg} className="img-download">
+  //         &#11015; SVG
+  //       </a>
+
+  //       <a
+  //         className="img-download"
+  //         href={getPNGIcon(selected.png, toolbar.size)}
+  //         download={`${selected.name}-${toolbar.size}x${toolbar.size}`}
+  //       >
+  //         &#11015; PNG
+  //       </a>
+  //     </div>
+
+  //     <button className="close-icon" onClick={() => clearSelectedIcon()}>
+  //       &#x2715;
+  //     </button>
+  //   </div>
+  // </div>}
 );
 
 Toolbar.propTypes = {
